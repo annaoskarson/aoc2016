@@ -16,10 +16,8 @@ def partone():
 def parttwo():
     def decrypt(w, num):
         nw = ''
-        #print(num % (122-97))
         shift = num % (122-96)
         for c in w:
-            #print(chr(ord(c) + shift))
             if c == ' ':
                 n = c
             elif (ord(c) + shift) > 122:
@@ -34,9 +32,6 @@ def parttwo():
         nword = decrypt(word, int(ID))
         if 'north' in nword:
             return(ID)
-        #print(nword, word)
-
-    return(0)
 
 print('Advent of Code 2016, day 4 part 1')
 print(partone())
